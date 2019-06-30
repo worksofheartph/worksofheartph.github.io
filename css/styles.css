@@ -1,0 +1,84 @@
+:root {
+  --sans-serif: soleil, sans-serif;
+  --serif: demos-next, serif;
+
+  --coffee: #efe9d8;
+  --teal: #2ea39b;
+  --purple: #713f54;
+  --dark-blue: #363640;
+  --light-purple: #bb8399;
+  --dark-purple: #142833;
+}
+
+body {
+  font: 14px/1.5 var(--sans-serif);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.headline-box {
+  background: var(--teal);
+  color: var(--coffee);
+  font-size: 1.1rem;
+  padding: 5rem;
+}
+
+.headline-box > a {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+nav {
+  --indent: 11.7rem;
+  background: var(--dark-purple);
+  padding: 5rem;
+  padding-left: calc(var(--indent) + 5rem);
+}
+
+nav a {
+  color: var(--light-purple);
+}
+
+.tag-filters {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: var(--coffee);
+  text-indent: calc(-1 * var(--indent));
+}
+
+.tag-filters > a.active {
+  color: var(--coffee);
+  text-decoration: underline;
+}
+
+.location-filters > a {
+  text-transform: uppercase;
+  padding-left: 5rem;
+}
+
+.location-filters > a:first-child:before {
+  content: '\1F4CD';
+  display: block;
+  position: absolute;
+}
