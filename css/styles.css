@@ -92,3 +92,32 @@ nav a {
   display: block;
   position: absolute;
 }
+
+.woh-menu {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woh-menu > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: black;
+  margin: 0 2.5rem;
+}
+
+.woh-menu > div { flex: 1; }
+.woh-menu > .works { text-align: right; }
+.woh-menu > .heart { text-align: left; }
+
+.woh-menu a {
+  text-transform: uppercase;
+  color: var(--purple);
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.woh-menu a.-active {
+  border-bottom: 1px solid;
+}
