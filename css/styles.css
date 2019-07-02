@@ -36,16 +36,26 @@ main {
   flex-direction: column;
 }
 
-.headline-box {
+.headline-container {
+  background: var(--coffee);
+  padding-left: calc(100% * 1 / 12);
+}
+
+.headline-content {
   background: var(--teal);
   color: var(--coffee);
   font-size: 1.1rem;
   padding: 5rem;
 }
 
-.headline-box > a {
+.headline-content > a {
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+.nav-container {
+  background: var(--purple);
+  padding-left: calc(100% * 1 / 12);
 }
 
 nav {
