@@ -3,8 +3,8 @@
 <head>
   <title>WOH</title>
   <link rel="stylesheet" href="https://use.typekit.net/lyk0uyc.css">
-  <link rel="stylesheet" href="css/sanitize.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/sanitize.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <main class="home">
@@ -37,11 +37,59 @@
         </nav>
       </div>
     </header>
-    <div class="woh-menu">
+    <section class="woh-menu">
       <div class="works"><a href="#" class="-active">Works</a></div>
-      <img src="">
+      <img src="/images/woh-logo.svg">
       <div class="heart"><a href="#">Heart</a></div>
-    </div>
+    </section>
+    <section class="work-cards">
+      <div class="gutter"></div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/560">
+        <h3>Rediscovering every day's potential</h3>
+        <div class="project">With Araw-Araw</div>
+        <div class="tags">Brand Identity, Publication</div>
+      </div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/320">
+        <h3>Breastfeeding support programs for Filipino women</h3>
+        <div class="project">With Nurtury Breastfeeding</div>
+        <div class="tags">Brand Identity</div>
+      </div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/560">
+        <h3>Early financial literacy for early returns</h3>
+        <div class="project">With Pitaka Ko</div>
+        <div class="tags">Graphic Design, Publication</div>
+      </div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/320">
+        <h3>Rediscovering every day's potential</h3>
+        <div class="project">With Araw-Araw</div>
+        <div class="tags">Brand Identity, Publication</div>
+      </div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/560">
+        <h3>Breastfeeding support programs for Filipino women</h3>
+        <div class="project">With Nurtury Breastfeeding</div>
+        <div class="tags">Brand Identity</div>
+      </div>
+      <div class="work-card">
+        <img src="https://placekitten.com/420/320">
+        <h3>Early financial literacy for early returns</h3>
+        <div class="project">With Pitaka Ko</div>
+        <div class="tags">Graphic Design, Publication</div>
+      </div>
+    </section>
   </main>
+  <script src="/js/masonry.pkgd.min.js"></script>
+  <script>
+    new Masonry(document.querySelector('.work-cards'), {
+      itemSelector: '.work-card',
+      columnWidth: '.work-card',
+      gutter: '.gutter',
+      percentPosition: true,
+    })
+  </script>
 </body>
 </html>

@@ -11,11 +11,18 @@
 }
 
 body {
-  font: 14px/1.5 var(--sans-serif);
+  font: 15px/1.5 var(--sans-serif);
 }
 
 h1, h2, h3, h4 {
   font-family: var(--serif);
+  line-height: 1.25;
+  font-weight: 400;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.8rem;
 }
 
 p {
@@ -37,8 +44,9 @@ main {
 }
 
 .headline-container {
-  background: var(--coffee);
-  padding-left: calc(100% * 1 / 12);
+  background: var(--coffee) url(/images/woh-logo.svg) no-repeat calc(100% * 0.5 / 14 - 2.5rem / 2) center;
+  background-size: 2.5rem;
+  padding-left: calc(100% * 1 / 14);
 }
 
 .headline-content {
@@ -55,7 +63,7 @@ main {
 
 .nav-container {
   background: var(--purple);
-  padding-left: calc(100% * 1 / 12);
+  padding-left: calc(100% * 1 / 14);
 }
 
 nav {
@@ -103,7 +111,6 @@ nav a {
 .woh-menu > img {
   width: 2.5rem;
   height: 2.5rem;
-  background: black;
   margin: 0 2.5rem;
 }
 
@@ -120,4 +127,43 @@ nav a {
 
 .woh-menu a.-active {
   border-bottom: 1px solid;
+}
+
+.work-cards {
+  width: calc(100% * 12 / 14);
+  align-self: center;
+}
+
+.work-cards > .gutter {
+  width: calc(100% * 0.75 / 12);
+}
+
+.work-card {
+  width: calc(100% * 3.5 / 12);
+  margin-bottom: calc(100% * 0.75 / 12);
+}
+
+.work-card > img {
+  width: 100%;
+}
+
+.work-card > h3 {
+  border-top: 3px solid;
+  padding-top: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.work-card > .project,
+.work-card > .tags {
+  text-transform: uppercase;
+}
+
+.work-card > .project {
+  font-weight: bold;
+}
+
+.work-card > .tags {
+  border-top: 0.5px solid;
+  margin-top: 1rem;
+  line-height: 2;
 }
