@@ -43,10 +43,14 @@ main {
   flex-direction: column;
 }
 
+.headline-container,
+.nav-container {
+  padding-left: calc(100% * 1.5 / 14);
+}
+
 .headline-container {
-  background: var(--coffee) url(/images/woh-logo.svg) no-repeat calc(100% * 0.5 / 14 - 2.5rem / 2) center;
+  background: var(--coffee) url(/images/woh-logo.svg) no-repeat calc(100% * 0.75 / 14 - 2.5rem / 2) center;
   background-size: 2.5rem;
-  padding-left: calc(100% * 1 / 14);
 }
 
 .headline-content {
@@ -63,7 +67,6 @@ main {
 
 .nav-container {
   background: var(--purple);
-  padding-left: calc(100% * 1 / 14);
 }
 
 nav {
