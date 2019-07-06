@@ -82,13 +82,18 @@
       </div>
     </section>
   </main>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
   <script src="/js/masonry.pkgd.min.js"></script>
   <script>
-    new Masonry(document.querySelector('.work-cards'), {
-      itemSelector: '.work-card',
-      columnWidth: '.work-card',
-      gutter: '.gutter',
-      percentPosition: true,
+    var workCards = document.querySelector('.work-cards')
+    imagesLoaded(workCards, function () {
+      new Masonry(workCards, {
+        itemSelector: '.work-card',
+        columnWidth: '.work-card',
+        gutter: '.gutter',
+        percentPosition: true,
+        horizontalOrder: true
+      })
     })
   </script>
 </body>
