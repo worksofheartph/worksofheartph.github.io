@@ -294,3 +294,43 @@ footer > div > div { flex: 1; }
 }
 
 /* END OF HOME */
+
+/* START OF ABOUT */
+
+.about > .woh-menu {
+  background: linear-gradient(to right,
+    var(--dark-purple) calc(100% * 5 / 14),
+    var(--purple) calc(100% * 5 / 14)
+  );
+}
+
+.about > .woh-menu a {
+  color: var(--coffee);
+}
+
+.about-hero {
+  background: var(--teal);
+  color: var(--coffee);
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-hero > .about-hero-text {
+  width: calc(100% * 5 / 14);
+  padding: 0 calc(100% * 1 / 14) 3rem;
+}
+
+.about-hero > img {
+  width: calc(100% * 9 / 14);
+}
+
+.about-hero-text > h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-text > p {
+  font-size: 1.1rem;
+}
+
+/* END OF ABOUT */
