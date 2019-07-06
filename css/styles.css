@@ -69,14 +69,14 @@ main {
   background: var(--purple);
 }
 
-nav {
+.nav-container > nav {
   --indent: 11.7rem;
   background: var(--dark-purple);
   padding: 5rem;
   padding-left: calc(var(--indent) + 5rem);
 }
 
-nav a {
+.nav-container > nav a {
   color: var(--light-purple);
 }
 
@@ -231,4 +231,65 @@ nav a {
 .story-list > .story > time {
   display: block;
   text-align: right;
+}
+
+footer {
+  display: flex;
+  color: var(--coffee);
+}
+
+footer > div {
+  display: flex;
+}
+
+footer > div > div {
+  flex: 1;
+}
+
+.tagline-container {
+  background: var(--teal);
+  width: calc(100% * 10 / 14);
+}
+
+.tagline-content {
+  background: var(--dark-purple);
+  padding: 3rem calc(100% * 1 / 10);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.tagline-content > h2 {
+  width: calc(100% * 3 / 8);
+  margin-right: calc(100% * 1 / 8);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.tagline-content > nav {
+  width: calc(100% * 4 / 8);
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.contact-container {
+  background: var(--coffee);
+  padding-bottom: 3rem;
+  width: calc(100% * 4 / 14);
+}
+
+.contact-content {
+  background: var(--purple);
+  padding: 3rem 0;
+  padding-left: calc(100% * 0.5 / 4);
+  padding-right: calc(100% * 1 / 4);
+}
+
+.contact-content > strong {
+  text-transform: uppercase;
+}
+
+.contact-content > address {
+  text-decoration: none;
 }
