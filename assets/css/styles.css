@@ -43,40 +43,99 @@ main {
   flex-direction: column;
 }
 
-.headline-container,
-.nav-container {
+footer {
+  display: flex;
+  color: var(--coffee);
+}
+
+/* This aligns the bottom paddings */
+footer > div { display: flex; }
+footer > div > div { flex: 1; }
+
+.footer-tagline {
+  background: var(--teal);
+  width: calc(100% * 10 / 14);
+}
+
+.footer-tagline-content {
+  background: var(--dark-purple);
+  padding: 3rem calc(100% * 1 / 10);
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.footer-tagline-content > h2 {
+  width: calc(100% * 3 / 8);
+  margin-right: calc(100% * 1 / 8);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.footer-tagline-content > nav {
+  width: calc(100% * 4 / 8);
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.footer-contact {
+  background: var(--coffee);
+  padding-bottom: 3rem;
+  width: calc(100% * 4 / 14);
+}
+
+.footer-contact-content {
+  background: var(--purple);
+  padding: 3rem 0;
+  padding-left: calc(100% * 0.5 / 4);
+  padding-right: calc(100% * 1 / 4);
+}
+
+.footer-contact-content > strong {
+  text-transform: uppercase;
+}
+
+.footer-contact-content > address {
+  text-decoration: none;
+}
+
+/* START OF HOME */
+
+.home-headline,
+.home-nav {
   padding-left: calc(100% * 1.5 / 14);
 }
 
-.headline-container {
-  background: var(--coffee) url(/images/woh-logo.svg) no-repeat calc(100% * 0.75 / 14 - 2.5rem / 2) center;
+.home-headline {
+  background: var(--coffee) url(../images/woh-logo.svg) no-repeat calc(100% * 0.75 / 14 - 2.5rem / 2) center;
   background-size: 2.5rem;
 }
 
-.headline-content {
+.home-headline-content {
   background: var(--teal);
   color: var(--coffee);
   font-size: 1.1rem;
   padding: 5rem;
 }
 
-.headline-content > a {
+.home-headline-content > a {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
 
-.nav-container {
+.home-nav {
   background: var(--purple);
 }
 
-.nav-container > nav {
+.home-nav > nav {
   --indent: 11.7rem;
   background: var(--dark-purple);
   padding: 5rem;
   padding-left: calc(var(--indent) + 5rem);
 }
 
-.nav-container > nav a {
+.home-nav > nav a {
   color: var(--light-purple);
 }
 
@@ -105,16 +164,16 @@ main {
 }
 
 .woh-menu {
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .woh-menu > img {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 2rem;
 }
 
 .woh-menu > div { flex: 1; }
@@ -171,22 +230,23 @@ main {
   line-height: 2;
 }
 
-.stories-section {
+.home-stories {
   background: var(--coffee);
   color: var(--purple);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
-.stories-section > .story-list {
+.home-stories > .story-list {
   width: calc(100% * 7 / 14);
   padding-right: calc(100% * 0.5 / 14);
 }
 
-.stories-section > .featured-image {
+.home-stories > .featured-image {
   width: calc(100% * 5 / 14);
   object-fit: contain;
 }
@@ -224,7 +284,7 @@ main {
 }
 
 .story-list > .story > h3 {
-  color: var(--dark-purple);
+  color: var(--dark-blue);
   margin-bottom: 0.5rem;
 }
 
@@ -233,63 +293,4 @@ main {
   text-align: right;
 }
 
-footer {
-  display: flex;
-  color: var(--coffee);
-}
-
-footer > div {
-  display: flex;
-}
-
-footer > div > div {
-  flex: 1;
-}
-
-.tagline-container {
-  background: var(--teal);
-  width: calc(100% * 10 / 14);
-}
-
-.tagline-content {
-  background: var(--dark-purple);
-  padding: 3rem calc(100% * 1 / 10);
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-}
-
-.tagline-content > h2 {
-  width: calc(100% * 3 / 8);
-  margin-right: calc(100% * 1 / 8);
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.tagline-content > nav {
-  width: calc(100% * 4 / 8);
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-}
-
-.contact-container {
-  background: var(--coffee);
-  padding-bottom: 3rem;
-  width: calc(100% * 4 / 14);
-}
-
-.contact-content {
-  background: var(--purple);
-  padding: 3rem 0;
-  padding-left: calc(100% * 0.5 / 4);
-  padding-right: calc(100% * 1 / 4);
-}
-
-.contact-content > strong {
-  text-transform: uppercase;
-}
-
-.contact-content > address {
-  text-decoration: none;
-}
+/* END OF HOME */

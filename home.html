@@ -1,0 +1,115 @@
+---
+layout: default
+permalink: /
+---
+<main class="home">
+  <header>
+    <div class="home-headline">
+      <div class="home-headline-content">
+        <strong>Works of Heart</strong> is a Filipino social impact design studio. We believe in
+        matching social imagination with good design to engage, transform, and shape a
+        nation that is free. <a href="#">See how and why we do it.</a>
+      </div>
+    </div>
+    <div class="home-nav">
+      <nav>
+        <p class="tag-filters">
+          Design for
+          <a href="#" class="active">all</a>,
+          <a href="#">culture and identity</a>,
+          <a href="#">education</a>,
+          <a href="#">environment</a>,
+          <a href="#">health</a>,
+          <a href="#">human and civil rights</a>,
+          <a href="#">social entrepreneurship</a>
+        </p>
+        <ul class="location-filters">
+          <a href="#">Luzon</a>
+          <a href="#">Visayas</a>
+          <a href="#">Mindanao</a>
+          <a href="#">International</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="woh-menu">
+    <div class="works"><a href="#" class="-active">Works</a></div>
+    <img src="/assets/images/woh-logo.svg">
+    <div class="heart"><a href="#">Heart</a></div>
+  </section>
+  <section class="work-cards">
+    <div class="gutter"></div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/560">
+      <h3>Rediscovering every day's potential</h3>
+      <div class="project">With Araw-Araw</div>
+      <div class="tags">Brand Identity, Publication</div>
+    </div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/320">
+      <h3>Breastfeeding support programs for Filipino women</h3>
+      <div class="project">With Nurtury Breastfeeding</div>
+      <div class="tags">Brand Identity</div>
+    </div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/560">
+      <h3>Early financial literacy for early returns</h3>
+      <div class="project">With Pitaka Ko</div>
+      <div class="tags">Graphic Design, Publication</div>
+    </div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/320">
+      <h3>Rediscovering every day's potential</h3>
+      <div class="project">With Araw-Araw</div>
+      <div class="tags">Brand Identity, Publication</div>
+    </div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/560">
+      <h3>Breastfeeding support programs for Filipino women</h3>
+      <div class="project">With Nurtury Breastfeeding</div>
+      <div class="tags">Brand Identity</div>
+    </div>
+    <div class="work-card">
+      <img src="https://placekitten.com/420/320">
+      <h3>Early financial literacy for early returns</h3>
+      <div class="project">With Pitaka Ko</div>
+      <div class="tags">Graphic Design, Publication</div>
+    </div>
+  </section>
+  <section class="home-stories">
+    <div class="story-list">
+      <div class="header">
+        <h2>Stories</h2>
+        <a href="#">See All</a>
+      </div>
+      {% for post in site.posts %}
+      {% if forloop.first %}
+      <div class="story -featured">
+      {% else %}
+      <div class="story">
+      {% endif %}
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      {% endfor %}
+    </div>
+    <img class="featured-image" src="https://placekitten.com/800/600">
+  </section>
+  {% include footer.html %}
+</main>
+
+<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="/assets/js/masonry.pkgd.min.js"></script>
+<script>
+  var workCards = document.querySelector('.work-cards')
+  imagesLoaded(workCards, function () {
+    new Masonry(workCards, {
+      itemSelector: '.work-card',
+      columnWidth: '.work-card',
+      gutter: '.gutter',
+      percentPosition: true,
+      horizontalOrder: true
+    })
+  })
+</script>
