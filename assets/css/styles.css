@@ -243,6 +243,7 @@ footer > div > div { flex: 1; }
 .work-card {
   width: calc(100% * 3.5 / 12);
   margin-bottom: calc(100% * 0.75 / 12);
+  display: block;
 }
 
 .work-card:hover {
