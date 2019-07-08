@@ -427,16 +427,139 @@ footer > div > div { flex: 1; }
 
 .about-hero > .about-hero-text {
   width: calc(100% * 5 / 14);
-  padding: 0 calc(100% * 0.5 / 14) 3rem;
+  padding: 0 calc(100% * 1 / 14) 3rem;
 }
 
 .about-hero > img {
   width: calc(100% * 9 / 14);
 }
 
+.about-hero-text > p {
+  color: var(--coffee);
+}
+
 .about-hero-text > h3 {
   margin-bottom: 1.5rem;
 }
+
+.about section:not(.about-hero) {
+  width: 100%;
+  padding: 5em calc(100% * 2 / 14);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+}
+
+.about-values {
+  background-color: var(--coffee);
+  color: var(--teal);
+}
+
+.-with-subheadline h5 {
+  flex: none;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.5em;
+  border-bottom: 0.5px solid;
+  text-transform: uppercase;
+}
+
+.value {
+  width: 45%;
+  padding: 1.5em 0;
+}
+
+.value h4 {
+  padding-bottom: 0.5em;
+}
+
+.value p, .headline p {
+  color: var(--dark-blue);
+}
+
+.about-values > .value:nth-child(3),
+.about-values > .value:nth-child(2) {
+  border-bottom: 0.5px solid;
+}
+
+.-with-headline {
+  width: 100%;
+  padding: 3em calc(100% * 2 / 14);
+}
+
+.-with-headline .headline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+  align-content: flex-start;
+  color: var(--teal);  
+  border-top: 0.5px solid;
+  padding-top: 1em;
+  flex: none;
+  margin-bottom: 5em;
+  width: 100%;
+}
+
+.-with-headline .headline * {
+  width: 45%;
+}
+
+.team {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;  
+  margin-bottom: 3em;
+}
+
+.team > img {
+  width: 40%;
+}
+
+.team > div {
+  width: 55%;
+}
+
+.team h4 {
+  font-weight: bold;
+  color: var(--purple);
+  margin-bottom: 0.5em;
+}
+
+.team h6 {
+  text-transform: uppercase;
+  margin: 0.5em 0;
+}
+
+.team.-partner {
+  width: 25%;
+}
+
+.team.-partner > * {
+  width: 100%;
+}
+
+.about-acknowledge > h5 {
+  color: var(--teal);
+}
+
+.about-acknowledge > * {
+  flex: none;
+  width: 100%;
+}
+
+.about-acknowledge ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  columns: 5;
+}
+
+.about-acknowledge ul li {
+  padding: 0.2em 0;
+}
+
 
 /* END OF ABOUT */
 
