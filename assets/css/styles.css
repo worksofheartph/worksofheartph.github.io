@@ -167,7 +167,7 @@ footer > div > div { flex: 1; }
 .home-headline-content {
   background: var(--teal);
   color: var(--coffee);
-  padding: 5rem calc(var(--indent) + 5rem) 5rem 5rem;
+  padding: 5rem calc(var(--indent) + 3rem) 5rem 5rem;
 }
 
 .home-headline-content > a {
@@ -281,11 +281,12 @@ footer > div > div { flex: 1; }
 }
 
 .work-text {
-  padding: 0.5rem 1rem 1.5rem;
+  padding: 0rem 1.5rem 1.5rem;
 }
 
 .work-text > h4 {
   border-top: 3px solid;
+  padding-top: 0.5rem;
   margin: 1.5rem 0;
 }
 
@@ -426,7 +427,7 @@ footer > div > div { flex: 1; }
 
 .about-hero > .about-hero-text {
   width: calc(100% * 5 / 14);
-  padding: 0 calc(100% * 1 / 14) 3rem;
+  padding: 0 calc(100% * 0.5 / 14) 3rem;
 }
 
 .about-hero > img {
