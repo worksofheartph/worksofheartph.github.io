@@ -79,6 +79,7 @@ strong {
 
 p {
   margin: 0 0 1.5rem;
+  color: var(--dark-blue);
 }
 
 p:last-child {
