@@ -17,8 +17,29 @@
 
   --indent: 11.7rem;
 
+  --arawaraw-a: #e2c05a;
+  --arawaraw-b: #cbae52;
+
+  --nurtury-a:;
+  --nurtury-b:;
+
   --pitakako-a: #0f7a68;
   --pitakako-b: #0d6f5e;
+
+  --childprotection-a: #8c474c;
+  --childprotection-b: #7e3f44;
+
+  --alternative-a: #da5641;
+  --alternative-b: #ca4f3b;
+
+  --dttb-a:;
+  --dttb-b:;
+
+  --anthill-a: #bc9a66;
+  --anthill-b: #ab8d5d;
+
+  --myreaders-a: #5d98d0;
+  --myreaders-b: #578bbd;
 }
 
 body {
@@ -283,8 +304,36 @@ footer > div > div { flex: 1; }
   line-height: 2;
 }
 
+.work-card.-arawaraw:hover {
+  background-color: var(--arawaraw-b);
+}
+
+.work-card.-nurtury:hover {
+  background-color: var(--nurtury-b);
+}
+
 .work-card.-pitakako:hover {
-  background-color: var(--pitakako-a);
+  background-color: var(--pitakako-b);
+}
+
+.work-card.-childprotection:hover {
+  background-color: var(--childprotection-b);
+}
+
+.work-card.-alternative:hover {
+  background-color: var(--alternative-b);
+}
+
+.work-card.-dttb:hover {
+  background-color: var(--dttb-b);
+}
+
+.work-card.-anthill:hover {
+  background-color: var(--anthill-b);
+}
+
+.work-card.-myreaders:hover {
+  background-color: var(--myreaders-b);
 }
 
 .home-stories {
