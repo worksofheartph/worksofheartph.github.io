@@ -19,13 +19,14 @@
 }
 
 body {
-  font: 15px/1.5 var(--sans-serif);
+  font: 15px/1.75 var(--sans-serif);
+  font-weight: 300;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--serif);
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -119,6 +120,7 @@ footer > div > div { flex: 1; }
   padding: 3rem 0;
   padding-left: calc(100% * 0.5 / 4);
   padding-right: calc(100% * 1 / 4);
+  font-size: 0.8rem;
 }
 
 .footer-contact-content > strong {
@@ -147,7 +149,6 @@ footer > div > div { flex: 1; }
 }
 
 .home-headline-content > a {
-  font-size: 0.8rem;
   padding: 3.5rem calc(var(--indent) + 3rem) 3.5rem 5rem;
   display: block;
 }
@@ -182,6 +183,7 @@ footer > div > div { flex: 1; }
   font-size: var(--h3);
   text-indent: calc(-1 * var(--indent));
   color: var(--light-purple);
+  line-height: 1.25em;
 }
 
 .tag-filters span {
