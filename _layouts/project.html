@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<main class="project">
+<main class="project" style="--project-color: {{ page.color_b }}">
   <section class="woh-menu">
     <div class="works"><a href="/">Works</a></div>
     <img src="/assets/images/woh-logo.svg">
@@ -38,4 +38,5 @@ layout: default
     </div>
   </section>
   {{ page.content }}
+  {% include footer.html %}
 </main>

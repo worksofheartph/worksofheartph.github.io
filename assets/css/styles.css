@@ -253,7 +253,7 @@ footer > div > div { flex: 1; }
 
 .work-card:hover {
   color: var(--coffee);
-  background-color: var(--hover-color);
+  background-color: var(--project-color);
 }
 
 .work-card:hover h4 {
@@ -286,10 +286,11 @@ footer > div > div { flex: 1; }
 .work-text > .tags {
   text-transform: uppercase;
   padding: 0 0.75rem;
+  font-weight: 500;
 }
 
-.work-text > .project {
-  font-weight: 600;
+.work-text > .tags {
+  font-weight: 300;
 }
 
 .work-text > .tags {
@@ -579,7 +580,7 @@ footer > div > div { flex: 1; }
 .project-details > div > * {
   padding: 1em;
   margin: 0;
-  font-weight: normal;
+  font-family: var(--sans-serif)
 }
 
 .project-details > div, 
@@ -621,5 +622,91 @@ footer > div > div { flex: 1; }
   padding-bottom: 0.5em;
 }
 
+#project-content {
+  padding: 3em 0;
+}
 
+#project-content section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#project-content section:not(.full-width) {
+  padding: 3.5em calc(100% * 1 / 14);
+}
+
+#project-content section div {
+  width: 45%;
+}
+
+#project-content img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#project-content section div img:last-child,
+#project-content .has-caption {
+  margin-bottom: 0px;
+}
+
+#project-content .img-70,
+#project-content .img-70 + .caption {
+  width: 70%;
+}
+
+#project-content h5 {
+  text-transform: uppercase;
+  margin: 3em 0 0;
+  color: var(--project-color);
+  font-family: var(--sans-serif);
+}
+
+#project-content div > h5:first-child {
+  margin: 0;
+}
+#project-content h5.caption {
+  text-transform: none;
+  color: var(--purple);
+  font-weight: 300;
+  margin: 0;
+}
+
+#project-content blockquote {
+  font-size: 1.7rem;
+  font-family: var(--serif);
+  color: var(--project-color);
+  font-style: italic;
+  border-top: 0.5px solid;
+  padding-top: 0.5em;
+  margin: 1.5em 0;
+  display: block;
+  width: 50%;
+  line-height: 1.25em;
+}
+
+#project-content .img-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+}
+
+#project-content .img-gallery img {
+  width: 32%;
+}
+
+#project-content .flex-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.final-note {
+  color: var(--project-color);
+  font-family: var(--sans-serif);
+  padding: 1em calc(100% * 1 / 14);
+  text-align: center;
+  width: 100%;
+}
 /* END OF PROJECT */
