@@ -44,14 +44,14 @@ permalink: /
     {% for project in ordered_projects %}
     <a
       href="{{ project.url }}"
-      class="work-card"
+      class="work-card {% if project.type %}work-passion{% endif %}"
       style="--hover-color: {{ project.color_b }}"
     >
-      <img src="{{ project.hero_image }}">
+      <div class="work-image" style="background-image: url({{ project.hero_image }})"></div>
       <div class="work-text">
         <h4>{{ project.title }}</h4>
         <div class="project">With {{ project.name }}</div>
-        <div class="tags">{{ project.tags | join: ", " }}</div>
+        <div class="tags">{{ project.service_tags | join: ", " }}</div>
       </div>
     </a>
     {% endfor %}
