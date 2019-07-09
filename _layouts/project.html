@@ -14,24 +14,28 @@ layout: default
         <h2>{{ page.title }}</h2>
         <p>With {{ page.name }}</p>
       </div>
-      <div class="project-details" style="background-color: {{page.color_b}};">
+      <div class="project-details {% if page.collaborator == nil %}no-collaborator{% endif %} {% if page.link_text == nil %}no-link{% endif %}" style="background-color: {{page.color_b}};">
         <div class="project-sector">
-          <h5>SECTOR</h5>
-          <div>Education</div>
+          <h6>SECTOR</h6>
+          <div>{{ page.sector | join: ", " }}</div>
         </div>
-        <div class="project-partner">
-          <h5>PARTNER</h5>
-          <div>SunLife Foundation</div>
+        <div class="project-{{ page.collaborator-heading }}">
+          <h6>{{ page.collaborator-heading }}</h6>
+          <div>{{ page.collaborator }}</div>
         </div>
         <div class="project-location">
-          <h5>LOCATION</h5>
-          <div>Mindanao</div>
+          <h6>LOCATION</h6>
+          <div>{{ page.location }}</div>
         </div>
         <div class="project-services">
-          <h5>SERVICES</h5>
-          <div>Graphic design</div>
+          <h6>SERVICES</h6>
+          <div>{{ page.services | join: ", " }}</div>
+        </div>
+        <div class="project-link">
+          <h6><a href="{{ page.link }}" target="_blank">{{ page.link_text }}</a></h6>
         </div>
       </div>
     </div>
   </section>
+  {{ page.content }}
 </main>
