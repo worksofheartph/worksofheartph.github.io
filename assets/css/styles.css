@@ -144,12 +144,16 @@ footer > div > div { flex: 1; }
 .home-headline-content {
   background: var(--teal);
   color: var(--coffee);
-  padding: 5rem calc(var(--indent) + 3rem) 5rem 5rem;
 }
 
 .home-headline-content > a {
   font-size: 0.8rem;
-  text-transform: uppercase;
+  padding: 3.5rem calc(var(--indent) + 3rem) 3.5rem 5rem;
+  display: block;
+}
+
+.home-headline-content:hover > a {
+  color: var(--dark-blue);
 }
 
 .home-nav {
