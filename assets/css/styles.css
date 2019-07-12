@@ -154,7 +154,7 @@ footer > div > div { flex: 1; }
 }
 
 .home-headline-content:hover > a {
-  color: var(--dark-blue);
+  color: #fff;
 }
 
 .home-nav {
@@ -675,10 +675,10 @@ footer > div > div { flex: 1; }
 }
 #project-content h5.caption {
   text-transform: none;
-  color: var(--purple);
+  color: #aeaeae;
   font-weight: 300;
   margin: 0;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 #project-content blockquote {
@@ -702,12 +702,18 @@ footer > div > div { flex: 1; }
 
 #project-content .img-gallery img {
   width: 32%;
+  height: auto;
 }
 
 #project-content .flex-end {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+
+#project-content .video video {
+  width: 100%;
 }
 
 .final-note {
