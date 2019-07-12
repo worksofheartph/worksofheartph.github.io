@@ -599,8 +599,8 @@ footer > div > div { flex: 1; }
   border-bottom: 0.5px solid transparent;
 }
 
-.project-details > div:nth-child(odd) > div {
-  border-right: 0.5px solid;
+.project-details > div:nth-child(even) > div {
+  border-left: 0.5px solid;
 }
 
 .project-details.no-collaborator > div:nth-child(2),
@@ -701,7 +701,7 @@ footer > div > div { flex: 1; }
 }
 
 #project-content .img-gallery img {
-  width: 32%;
+  width: 32.5%;
   height: auto;
 }
 
