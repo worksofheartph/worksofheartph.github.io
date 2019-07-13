@@ -751,6 +751,7 @@ footer > div > div { flex: 1; }
   width: calc(100% * 12 / 14 * 0.45 * 0.7);
   margin-left: calc(100% * 1 / 14);
   justify-self: center;
+  margin-top: 1.5em;
 }
 
 #project-content .img-slider > .captions > .caption {
@@ -764,7 +765,7 @@ footer > div > div { flex: 1; }
 #project-content .img-slider > .dots {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: 1em;
   display: flex;
   width: auto;
   transform: translateX(-50%);
@@ -773,13 +774,13 @@ footer > div > div { flex: 1; }
 #project-content .img-slider > .dots > .dot {
   width: 0.75rem;
   height: 0.75rem;
-  border: 1px solid;
+  border: 1px solid var(--purple);
   border-radius: 50%;
   margin: 0 0.3rem;
 }
 
 #project-content .img-slider > .dots > .dot.-active {
-  background: currentColor;
+  background: var(--purple);
 }
 
 /* END OF PROJECT */
