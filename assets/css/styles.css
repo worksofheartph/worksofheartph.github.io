@@ -595,8 +595,14 @@ footer > div > div { flex: 1; }
 .project-details > div:nth-child(3) > div ,
 .project-details > div:nth-child(4) > div,
 .project-details > .project-link,
+.project-details > .project-location,
+.project-details > .project-services,
 .project-details > .project-link > h6 {
   border-bottom: 0.5px solid transparent;
+}
+
+.project-details > .project-link {
+  border-top: 0.5px solid;
 }
 
 .project-details > div:nth-child(even) > div {
