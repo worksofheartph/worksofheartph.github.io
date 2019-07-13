@@ -39,9 +39,17 @@ layout: default
   </section>
   {{ page.content }}
   {% include footer.html %}
+  <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
   <script>
+    function toggleClass (className, isToggled, el) {
+      el.classList.toggle(className, isToggled)
+    }
+    var addActive = toggleClass.bind(null, '-active', true)
+    var removeActive = toggleClass.bind(null, '-active', false)
+
     var sliders = Array.from(document.querySelectorAll('.img-slider'))
     sliders.forEach(initSlider)
+
     function initSlider (slider) {
       var images = Array.from(slider.querySelectorAll('.images > img'))
       var captions = Array.from(slider.querySelectorAll('.captions > .caption'))
@@ -58,6 +66,7 @@ layout: default
         slider.querySelector('.dots').appendChild(dot)
         return dot
       })
+
       function setActive (i) {
         dots.forEach(removeActive)
         addActive(dots[i])
@@ -69,11 +78,27 @@ layout: default
           behavior: 'smooth'
         })
       }
-      function toggleClass (className, isToggled, el) {
-        el.classList.toggle(className, isToggled)
-      }
-      var addActive = toggleClass.bind(null, '-active', true)
-      var removeActive = toggleClass.bind(null, '-active', false)
+
+      imagesLoaded(images, function () {
+        var timeout
+        var centers = images.map(function (image) {
+          return image.offsetLeft + image.offsetWidth / 2
+        })
+        slider.querySelector('.images').addEventListener('scroll', function (e) {
+          var scrollLeft = this.scrollLeft
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+          timeout = setTimeout(function () {
+            var distances = centers.map(function (center) {
+              return Math.abs(center - scrollLeft - window.innerWidth / 2)
+            })
+            var minDistance = Math.min.apply(null, distances)
+            setActive(distances.indexOf(minDistance))
+          }, 100)
+        })
+      })
+
       setActive(0)
     }
   </script>

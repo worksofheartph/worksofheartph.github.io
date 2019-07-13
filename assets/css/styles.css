@@ -737,7 +737,9 @@ footer > div > div { flex: 1; }
 
 #project-content .img-slider > .images > img {
   flex: none;
-  width: calc(100% * 12 / 14);
+  max-width: calc(100% * 12 / 14);
+  max-height: 90vh;
+  object-fit: cover;
   margin: 0 1rem 0 0;
 }
 
