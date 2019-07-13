@@ -39,4 +39,42 @@ layout: default
   </section>
   {{ page.content }}
   {% include footer.html %}
+  <script>
+    var sliders = Array.from(document.querySelectorAll('.img-slider'))
+    sliders.forEach(initSlider)
+    function initSlider (slider) {
+      var images = Array.from(slider.querySelectorAll('.images > img'))
+      var captions = Array.from(slider.querySelectorAll('.captions > .caption'))
+      if (images.length !== captions.length) {
+        console.error("Number of images and captions don't match!")
+      }
+      var dots = images.map(function (image, i) {
+        var dot = document.createElement('div')
+        dot.classList.add('dot')
+        if (i === 0) {
+          dot.classList.add('-active')
+        }
+        dot.addEventListener('click', setActive.bind(null, i))
+        slider.querySelector('.dots').appendChild(dot)
+        return dot
+      })
+      function setActive (i) {
+        dots.forEach(removeActive)
+        addActive(dots[i])
+        captions.forEach(removeActive)
+        addActive(captions[i])
+        var image = images[i]
+        slider.querySelector('.images').scrollTo({
+          left: image.offsetLeft - (window.innerWidth - image.offsetWidth) / 2,
+          behavior: 'smooth'
+        })
+      }
+      function toggleClass (className, isToggled, el) {
+        el.classList.toggle(className, isToggled)
+      }
+      var addActive = toggleClass.bind(null, '-active', true)
+      var removeActive = toggleClass.bind(null, '-active', false)
+      setActive(0)
+    }
+  </script>
 </main>
