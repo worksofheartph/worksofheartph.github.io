@@ -738,6 +738,14 @@ footer > div > div { flex: 1; }
   font-weight: lighter;
 }
 
+.final-note a {
+  text-decoration: underline;
+}
+
+.final-note a:hover {
+  text-decoration: none;
+}
+
 #project-content .img-slider {
   position: relative;
 }
