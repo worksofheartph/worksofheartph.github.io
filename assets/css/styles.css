@@ -170,10 +170,12 @@ footer > div > div { flex: 1; }
 
 .home-nav > nav a {
   color: var(--light-purple);
+  transition: 0.05s ease-in-out;
 }
 
 .home-nav > nav a:hover {
   color: var(--coffee);
+  transition: 0.05s ease-in-out;
 }
 
 
@@ -232,6 +234,7 @@ footer > div > div { flex: 1; }
   padding-bottom: 0.2rem;
 }
 
+.woh-menu a:not(.woh-heart):hover,
 .woh-menu a.-active {
   border-bottom: 1px solid;
 }
@@ -249,11 +252,13 @@ footer > div > div { flex: 1; }
   width: calc(100% * 3.5 / 12);
   margin-bottom: calc(100% * 0.75 / 12);
   display: block;
+  transition: 0.05s ease-in-out;
 }
 
 .work-card:hover {
   color: var(--coffee);
   background-color: var(--project-color);
+  transition: 0.05s ease-in-out;
 }
 
 .work-card:hover h4 {
@@ -535,6 +540,7 @@ footer > div > div { flex: 1; }
   color: var(--coffee);
 }
 
+
 .project-hero {
   display: flex;
   height: 100vh;
@@ -670,6 +676,11 @@ footer > div > div { flex: 1; }
 #project-content .img-70,
 #project-content .img-70 + .caption {
   width: 70%;
+}
+
+#project-content .img-50,
+#project-content .img-50 + .caption {
+  width: 50%;
 }
 
 #project-content .img-30 {
@@ -820,5 +831,13 @@ footer > div > div { flex: 1; }
   background-color: transparent;
 }
 
+#project-content a {
+  text-decoration: underline;
+  transition: 0.05s ease-in-out;
+}
 
+#project-content a:hover {
+  text-decoration: none;
+  transition: 0.05s ease-in-out;
+}
 /* END OF PROJECT */
