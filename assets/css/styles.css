@@ -107,6 +107,13 @@ footer > div > div { flex: 1; }
   justify-content: space-between;
   text-transform: uppercase;
   font-size: var(--h5);
+  transition: 0.05s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-tagline-content > nav > a:hover {
+  border-bottom: 1px solid;
+  transition: 0.05s ease-in-out;
 }
 
 .footer-contact {
@@ -129,6 +136,10 @@ footer > div > div { flex: 1; }
 
 .footer-contact-content > address {
   text-decoration: none;
+}
+
+.social a {
+  font-size: 1.5em;
 }
 
 /* START OF HOME */
