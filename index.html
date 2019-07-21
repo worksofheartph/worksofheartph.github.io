@@ -15,12 +15,12 @@ permalink: /
       <nav>
         <p class="tag-filters">
           <span>Design for</span>
-          <button data-filter="*" class="active">all</button>,
-          <button data-filter=".culture-identity">culture and identity</button>,
-          <button data-filter=".education">education</button>,
-          <button data-filter=".environment">environment</button>,
-          <button data-filter=".health">health</button>,
-          <button data-filter=".human-civil-rights">human and civil rights</button>,
+          <button data-filter="*" class="active">all,</button>
+          <!-- <button data-filter=".culture-identity">culture and identity,</button> -->
+          <button data-filter=".education">education,</button>
+          <button data-filter=".environment">environment,</button>
+          <button data-filter=".health">health,</button>
+          <button data-filter=".human-civil-rights">human and civil rights,</button>
           <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>
         </p>
         <ul class="location-filters">
@@ -79,41 +79,25 @@ permalink: /
   {% include footer.html %}
 </main>
 
-<script src="https://unpkg.com/isotope-layout@3/dist/
-isotope.pkgd.min.js"></script>
-
+<script src="/assets/js/isotope.pkgd.min.js"></script>
 <script type="text/javascript">
-
-$work = $('.work-card');
-
-if ($work.length) {
-
-var $grid = $('.work-cards').isotope({
-  itemSelector: '.work-card',
-  layoutMode: 'fitRows'
-});
-
-$('.tag-filters').on( 'click', 'button', function() {
-  var filterValue = $( this ).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
-
-}
-
-</script>
-
-<script src="/assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="/assets/js/masonry.pkgd.min.js"></script>
-<script>
-  var workCards = document.querySelector('.work-cards')
-  imagesLoaded(workCards, function () {
-    new Masonry(workCards, {
+var $work = $('.work-card');
+imagesLoaded($work, function () {
+  if ($work.length) {
+    var $grid = $('.work-cards').isotope({
       itemSelector: '.work-card',
-      columnWidth: '.work-card',
-      gutter: '.gutter',
+      masonry: {
+        columnWidth: '.work-card',
+        gutter: '.gutter',
+        horizontalOrder: true
+      },
       percentPosition: true,
-      horizontalOrder: true
-    })
-  })
-
+      transitionDuration: 0
+    });
+    $('.tag-filters').on('click', 'button', function () {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+    });
+  }
+});
 </script>
