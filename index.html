@@ -15,13 +15,13 @@ permalink: /
       <nav>
         <p class="tag-filters">
           <span>Design for</span>
-          <a href="#" class="active">all</a>,
-          <a href="#">culture and identity</a>,
-          <a href="#">education</a>,
-          <a href="#">environment</a>,
-          <a href="#">health</a>,
-          <a href="#">human and civil rights</a>,
-          <a href="#">social entrepreneurship</a>
+          <button data-filter="*" class="active">all</button>,
+          <button data-filter=".culture-identity">culture and identity</button>,
+          <button data-filter=".education">education</button>,
+          <button data-filter=".environment">environment</button>,
+          <button data-filter=".health">health</button>,
+          <button data-filter=".human-civil-rights">human and civil rights</button>,
+          <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>
         </p>
         <ul class="location-filters">
           <a href="#">All</a>
@@ -34,7 +34,7 @@ permalink: /
     </div>
   </header>
   <section class="woh-menu">
-    <div class="works"><a href="#" class="-active">Works</a></div>
+    <div class="works"><a href="/" class="-active">Works</a></div>
     <a href="/" class="woh-heart"><img src="/assets/images/woh-logo.svg"></a>
     <div class="heart"><a href="/heart">Heart</a></div>
   </section>
@@ -44,7 +44,7 @@ permalink: /
     {% for project in ordered_projects %}
     <a
       href="{{ project.url }}"
-      class="work-card {% if project.type %}work-passion{% endif %}"
+      class="work-card {% if project.type %}work-passion{% endif %} {{ project.sector | join: '' }}"
       style="--project-color: {{ project.color_b }}"
     >
       <div class="work-image" style="background-image: url({{ project.hero_image }})"></div>
@@ -79,6 +79,29 @@ permalink: /
   {% include footer.html %}
 </main>
 
+<script src="https://unpkg.com/isotope-layout@3/dist/
+isotope.pkgd.min.js"></script>
+
+<script type="text/javascript">
+
+$work = $('.work-card');
+
+if ($work.length) {
+
+var $grid = $('.work-cards').isotope({
+  itemSelector: '.work-card',
+  layoutMode: 'fitRows'
+});
+
+$('.tag-filters').on( 'click', 'button', function() {
+  var filterValue = $( this ).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
+
+}
+
+</script>
+
 <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
 <script src="/assets/js/masonry.pkgd.min.js"></script>
 <script>
@@ -92,4 +115,5 @@ permalink: /
       horizontalOrder: true
     })
   })
+
 </script>

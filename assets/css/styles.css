@@ -191,12 +191,23 @@ footer > div > div { flex: 1; }
 
 
 .tag-filters {
+  text-indent: calc(-1 * var(--indent));
   font-family: var(--serif);
   font-weight: 300;
   font-size: var(--h3);
-  text-indent: calc(-1 * var(--indent));
+  color: var(--light-purple);
+}
+
+.tag-filters button {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: var(--h3);
   color: var(--light-purple);
   line-height: 1.25em;
+  background: none;
+  border: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .tag-filters span {
