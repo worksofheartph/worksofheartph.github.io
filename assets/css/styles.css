@@ -243,9 +243,10 @@ footer > div > div { flex: 1; }
 }
 
 .woh-menu > a > img {
-  width: 1.5rem;
+  width: 2.5rem;
   height: 1.5rem;
   margin: 0 2rem;
+  vertical-align: bottom;
 }
 
 .woh-menu > div { flex: 1; }
