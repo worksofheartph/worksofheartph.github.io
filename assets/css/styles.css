@@ -108,6 +108,9 @@ footer > div > div { flex: 1; }
   text-transform: uppercase;
   font-size: var(--h5);
   transition: 0.05s ease-in-out;
+}
+
+.footer-tagline-content > nav > a {
   border-bottom: 1px solid transparent;
 }
 
@@ -560,6 +563,7 @@ footer > div > div { flex: 1; }
 
 .project > .woh-menu a {
   color: var(--coffee);
+  border-bottom: 1px solid transparent;
 }
 
 
