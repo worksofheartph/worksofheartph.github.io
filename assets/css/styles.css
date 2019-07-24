@@ -209,27 +209,51 @@ footer > div > div { flex: 1; }
   line-height: 1.25em;
   background: none;
   border: 0px;
+  outline: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
+  transition: 0.02s ease-in-out all;
+}
+
+.tag-filters button.disabled,
+.tag-filters button.disabled:hover {
+  cursor: auto;
+  color: inherit;
+  border-bottom: 1px solid transparent;
 }
 
 .tag-filters span {
   color: var(--coffee);
 }
 
-.tag-filters > a.active {
+.tag-filters button:hover, .tag-filters > button.active,
+.location-filters button:hover, .location-filters > button.active {
   color: var(--coffee);
   border-bottom: 1px solid;
+  transition: 0.02s ease-in-out all;
 }
 
-.location-filters > a {
+.location-filters > button {
   text-transform: uppercase;
-  padding-left: 5rem;
+  margin-left: 5rem;
+  color: var(--light-purple);
+  line-height: 1.25em;
+  background: none;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  transition: 0.02s ease-in-out all;
 }
 
-.location-filters > a:first-child:before {
-  content: '\1F4CD';
+.location-filters > button:first-child:before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: '\f276';
   display: block;
+  left: -5rem;
   position: absolute;
 }
 

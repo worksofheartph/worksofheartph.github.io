@@ -16,20 +16,21 @@ permalink: /
         <p class="tag-filters">
           <span>Design for</span>
           <button data-filter="*" class="active">all,</button>
-          <!-- <button data-filter=".culture-identity">culture and identity,</button> -->
+          <button class="disabled" disabled="disabled">culture and identity,</button>
           <button data-filter=".education">education,</button>
           <button data-filter=".environment">environment,</button>
           <button data-filter=".health">health,</button>
           <button data-filter=".human-civil-rights">human and civil rights,</button>
-          <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>
+          <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>,
+          <button class="disabled" disabled="disabled">innovation and technology</button>
         </p>
-        <ul class="location-filters">
-          <a href="#">All</a>
-          <a href="#">Luzon</a>
-          <a href="#">Visayas</a>
-          <a href="#">Mindanao</a>
-          <a href="#">International</a>
-        </ul>
+        <p class="location-filters">
+          <button data-filter="*">All</button>
+          <button data-filter=".Luzon">Luzon</button>
+          <button data-filter=".Visayas">Visayas</button>
+          <button data-filter=".Mindanao">Mindanao</button>
+          <button data-filter=".International">International</button>
+        </p>
       </nav>
     </div>
   </header>
@@ -44,7 +45,7 @@ permalink: /
     {% for project in ordered_projects %}
     <a
       href="{{ project.url }}"
-      class="work-card {% if project.type %}work-passion{% endif %} {{ project.sector | join: '' }}"
+      class="work-card {% if project.type %}work-passion{% endif %} {{ project.sector_tag | join: ' ' }} {{ project.location_tag | join: ' ' }}"
       style="--project-color: {{ project.color_b }}"
     >
       <div class="work-image" style="background-image: url({{ project.hero_image }})"></div>
@@ -97,6 +98,15 @@ imagesLoaded($work, function () {
     $('.tag-filters').on('click', 'button', function () {
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
+      $('.tag-filters button').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    $('.location-filters').on('click', 'button', function () {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
+      $('.location-filters button').removeClass('active');
+      $(this).addClass('active');
     });
   }
 });
