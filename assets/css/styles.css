@@ -101,6 +101,11 @@ footer > div > div { flex: 1; }
   font-weight: 300;
 }
 
+.footer-tagline-content > h3 img {
+  height: 8px;
+  vertical-align: baseline;
+}
+
 .footer-tagline-content > nav {
   width: calc(100% * 4 / 8);
   display: flex;
