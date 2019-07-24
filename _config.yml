@@ -1,4 +1,6 @@
 collections:
+  posts:
+    permalink: "/stories/:slug"
   projects:
     output: true
     permalink: "/:name"

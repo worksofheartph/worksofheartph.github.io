@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<main class="post">
+  <section class="woh-menu">
+    <div class="works"><a href="/">Works</a></div>
+    <a href="/" class="woh-heart"><img src="/assets/images/woh-logo.svg"></a>
+    <div class="heart"><a href="/heart">Heart</a></div>
+  </section>
+  <section class="post-hero">
+  	<img src="{{ page.hero }}">
+  	<div class="post-meta">
+  		<h2>{{ page.title }}</h2>
+  		<div class="post-details">
+            <div class="post-author">
+                WORDS BY {{ page.author }}
+            </div>
+            <div class="post-photos">
+                PHOTOS BY {{ page.photos }}
+            </div>
+            <div class="post-date">
+                ON {{ page.date | date_to_string }}
+            </div>
+  		</div>
+  	</div>
+  </section>
+</main>
