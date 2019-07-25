@@ -12,19 +12,30 @@ permalink: /stories
     <div class="post-featured">
     <div class="post-featured-content">
         <h5>STORIES</h5>
-        <h3>Para: Negros Occidental</h3>
-        <div class="post-info">
-            <div class="post-author">
-                BY NIKKI SOLINAP
-            </div>
-            <div class="post-date">
-                13 Jun 2019
-            </div>
-        </div>
-        <p>Dear Artist 2017, a creative camp for artists, designers, and all manners of creatives, was held last June 11 and 12 in The Coffee Farmhouse. The camp was oriented towards helping these artists discover their voices, spaces, and eventual directions within the communities that each one of them aspires to serve.
-</p>
+         {% for post in site.posts %}
+      {% if forloop.first %}
+      <div class="story">
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+        <p>{{ post.excerpt }}</p>
+        <time>{{ post.date | date_to_string }}</time>
       </div>
+      {% endif %}
+
+      {% endfor %}
             </div>
   </header>
+
+
+         {% for post in site.posts %}
+      {% if forloop.first %}
+      {% else %}
+      <div class="story">
+        <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+        <p>{{ post.excerpt }}</p>
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      {% endif %}
+
+      {% endfor %}
 
 </main>

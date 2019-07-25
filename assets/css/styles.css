@@ -476,6 +476,29 @@ footer > div > div { flex: 1; }
   flex-wrap: wrap;
 }
 
+.about-process h5 {
+  width: 100%;
+  text-align: center;
+  color: var(--teal);
+}
+
+.about-process > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-process div img {
+  width: 60%;
+  margin-right: 5%;
+}
+
+.about-process h4 {
+  font-family: var(--sans-serif);
+  color: var(--teal);
+  border-top: 1px solid;
+  padding-top: 0.5em;
+}
+
 .about-values {
   background-color: var(--coffee);
   color: var(--teal);
@@ -528,6 +551,37 @@ footer > div > div { flex: 1; }
 
 .-with-headline .headline * {
   width: 45%;
+}
+
+.partners {
+  display: flex;
+  align-content: flex-start;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.partners div {
+  width: calc(100%/3);
+  padding-right: 5em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.partners h6 {
+  color: var(--teal);
+  flex: none;
+  width: 100%;
+}
+
+.partners div a {
+  width: calc(100%/3); 
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.partners div a img {
+  width: 70%;
 }
 
 .team {
