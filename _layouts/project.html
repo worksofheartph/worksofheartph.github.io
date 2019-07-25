@@ -38,7 +38,6 @@ layout: default
     </div>
   </section>
   {{ page.content }}
-  {% include footer.html %}
   <script>
     function toggleClass (className, isToggled, el) {
       el.classList.toggle(className, isToggled)
@@ -102,3 +101,4 @@ layout: default
     }
   </script>
 </main>
+{% include footer.html %}
