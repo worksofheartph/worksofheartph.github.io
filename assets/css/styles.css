@@ -425,6 +425,10 @@ footer > div > div { flex: 1; }
   text-align: right;
 }
 
+.story > a:hover h4 {
+  color: var(--dark-blue);
+}
+
 /* END OF HOME */
 
 /* START OF ABOUT */
@@ -976,4 +980,8 @@ footer > div > div { flex: 1; }
 
 .post-details > div:first-child {
   border-left: none;
+}
+
+#post-content {
+  padding: 3em calc(100% * 3 / 14);
 }

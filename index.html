@@ -69,13 +69,13 @@ permalink: /
       {% else %}
       <div class="story">
       {% endif %}
-        <h4>{{ post.title }}</h4>
+        <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
         <p>{{ post.excerpt }}</p>
         <time>{{ post.date | date_to_string }}</time>
       </div>
       {% endfor %}
     </div>
-    <img class="featured-image" src="https://placekitten.com/800/600">
+    <img class="featured-image" src="/assets/images/blog-para-negros/a.jpg">
   </section>
   {% include footer.html %}
 </main>
