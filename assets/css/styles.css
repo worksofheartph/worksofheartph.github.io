@@ -100,13 +100,13 @@ footer > div > div { flex: 1; }
   margin-bottom: 3rem;
 }
 
-.footer-tagline-content > h3 {
+.footer-tagline-content h3 {
   width: calc(100% * 3 / 8);
   margin-right: calc(100% * 1 / 8);
   font-weight: 300;
 }
 
-.footer-tagline-content > h3 img {
+.footer-tagline-content h3 img {
   height: 8px;
   vertical-align: baseline;
 }
@@ -149,6 +149,7 @@ footer > div > div { flex: 1; }
 
 .footer-contact-content > address {
   text-decoration: none;
+  font-style: inherit;
 }
 
 .social a {
@@ -258,13 +259,15 @@ footer > div > div { flex: 1; }
   transition: 0.02s ease-in-out all;
 }
 
-.location-filters > button:first-child:before {
+.location-filters > button:first-child:before,
+.location-filters > button:first-child:hover:before {
   font-family: "Font Awesome 5 Free"; 
   font-weight: 900; 
   content: '\f276';
   display: block;
   left: -5rem;
   position: absolute;
+  color: var(--purple);
 }
 
 .woh-menu {
