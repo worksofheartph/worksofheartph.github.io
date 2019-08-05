@@ -10,8 +10,8 @@ layout: default
   <section class="post-hero">
   	<img src="{{ page.hero }}">
   	<div class="post-meta">
-  		<h2>{{ page.title }}</h2>
-  		<div class="post-details">
+  		<h3>{{ page.title }}</h3>
+  		<div class="post-details {% if page.photos == nil %}no-photos{% endif %}">
             <div class="post-author">
                 WORDS BY {{ page.author }}
             </div>
