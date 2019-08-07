@@ -63,7 +63,7 @@ permalink: /
         <h5>Stories</h5>
         <a href="/stories">See All</a>
       </div>
-      {% for post in site.posts %}
+      {% for post in site.posts limit:3 %}
       {% if forloop.first %}
       <div class="story -featured">
       {% else %}
@@ -113,7 +113,7 @@ imagesLoaded($work, function () {
       $(this).addClass('active');
       // $('html, body').animate({
       // scrollTop: $(".woh-menu").offset().top
-      // }, 600);    
+      // }, 600);
 
   });
 
