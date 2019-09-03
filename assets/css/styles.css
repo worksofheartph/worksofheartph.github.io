@@ -597,6 +597,12 @@ footer > div > div { flex: 1; }
   width: 100%;
 }
 
+.about-partners h3,
+.partners h6,
+.about-partners .headline {
+  color: var(--purple);
+}
+
 .partners div a {
   width: calc(100%/3); 
   text-align: center;
