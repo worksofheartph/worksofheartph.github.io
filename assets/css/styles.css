@@ -1015,6 +1015,11 @@ h5.caption {
   text-decoration: none;
   transition: 0.05s ease-in-out;
 }
+
+.acknow {
+  color: var(--teal);
+}
+
 /* END OF PROJECT */
 
 /* STORIES */
