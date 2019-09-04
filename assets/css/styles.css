@@ -261,8 +261,8 @@ footer > div > div { flex: 1; }
 
 .location-filters > button:first-child:before,
 .location-filters > button:first-child:hover:before {
-  font-family: "Font Awesome 5 Free"; 
-  font-weight: 900; 
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: '\f276';
   display: block;
   left: -5rem;
@@ -505,31 +505,56 @@ footer > div > div { flex: 1; }
   color: var(--teal);
 }
 
-.about-process > div {
-  display: flex;
-  justify-content: space-between;
+.process-steps {
+  position: relative;
 }
 
-.about-process div img {
+.process-steps > .process-dots {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35%;
+}
+
+.process-step {
+  display: none;
+}
+
+.process-step.active {
+  display: flex;
+}
+
+.process-step img {
   width: 60%;
   margin-right: 5%;
 }
 
-.about-process h4 {
+.process-step h4 {
   font-family: var(--sans-serif);
   color: var(--teal);
   border-top: 1px solid;
   padding: 0.5em 0;
 }
 
-.process-step span {
-  border: 1px solid var(--teal);
-  padding: 0.25em;
-  text-align: center;
+.process-dots {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.process-step span.active,
-.process-step span:hover {
+.process-dots span {
+  border: 1px solid var(--teal);
+  display: flex;
+  width: 2em;
+  height: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--teal);
+  margin-right: 2em;
+}
+
+.process-dots span.active,
+.process-dots span:hover {
   background: var(--teal);
   color: #fff;
   cursor: pointer;
@@ -617,7 +642,7 @@ footer > div > div { flex: 1; }
 }
 
 .partners div a {
-  width: calc(100%/3); 
+  width: calc(100%/3);
   text-align: center;
   margin-bottom: 1em;
 }
@@ -1066,8 +1091,8 @@ h5.caption {
   padding-top: calc(100% * 0.5 / 14);
   padding-bottom: calc(100% * 0.5 / 14);
   padding-right: calc(100% * 0.5 / 14);
-  background: var(--purple); 
-  display: flex;  
+  background: var(--purple);
+  display: flex;
   justify-content: space-between;
 }
 
@@ -1129,7 +1154,7 @@ h5.caption {
 }
 
 .post .post-details {
-  margin-top: 3em;  
+  margin-top: 3em;
   border-bottom: 0px solid;
 }
 
@@ -1147,7 +1172,7 @@ h5.caption {
 }
 
 .post-details.no-photos > div {
-  width: calc(100% * 7 / 14);  
+  width: calc(100% * 7 / 14);
 }
 
 .post-details > div:first-child {
