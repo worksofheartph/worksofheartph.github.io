@@ -38,6 +38,16 @@ layout: default
     </div>
   </section>
   {{ page.content }}
+  <div class="related-projects">
+    {%
+      assign related_projects = site.projects |
+        where_exp:"project","project.sector_tag contains page.sector_tag[0]" |
+        where_exp:"project","project.id != page.id"
+    %}
+    {% for project in related_projects %}
+      <a href="{{ project.url }}">{{ project.title }}</a>
+    {% endfor %}
+  </div>
   <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
   <script>
     function toggleClass (className, isToggled, el) {
