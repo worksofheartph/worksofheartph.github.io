@@ -522,6 +522,19 @@ footer > div > div { flex: 1; }
   padding: 0.5em 0;
 }
 
+.process-step span {
+  border: 1px solid var(--teal);
+  padding: 0.25em;
+  text-align: center;
+}
+
+.process-step span.active,
+.process-step span:hover {
+  background: var(--teal);
+  color: #fff;
+  cursor: pointer;
+}
+
 .about-values {
   background-color: var(--coffee);
   color: var(--teal);
