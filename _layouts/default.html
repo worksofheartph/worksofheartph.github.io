@@ -1,16 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Works of Heart &nbsp;· &nbsp;Filipino Social Impact Design Studio</title>
+  <title>{{ page.title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ page.meta_desc }}">
+  <meta name="author" content="Works of Heart">
+  <meta property="og:title" content="{{ page.meta_title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ page.meta_desc }}" />
+  <meta property="og:image:secure_url" content="{{ page.meta_img }}" />
+  <meta property="og:image" content="{{ page.meta_img }}" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="520" />
+  <meta property="og:url" content="<?= $url; ?>/filipina-american-divorce" />
+  <meta property="og:site_name" content="Works of Heart &nbsp;· &nbsp;Filipino Social Impact Design Studio" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@NextDayBetter" />
+  <meta name="twitter:creator" content="@worksofhe.art" />
+  <meta name="twitter:title" content="{{ page.meta_title }}" />
+  <meta name="twitter:description" content="{{ page.meta_desc }}" />
+  <meta name="twitter:image" content="{{ page.meta_img }}" />
+
   <link rel="stylesheet" href="https://use.typekit.net/lyk0uyc.css">
   <link rel="stylesheet" href="/assets/css/sanitize.min.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link href="/assets/css/zoom.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/b5cb587c35.js"></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/transition.js"></script>
   <script src="/assets/js/zoom.js"></script>
+  <script src="https://kit.fontawesome.com/b5cb587c35.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  
 </head>
 <body>
   {{ content }}
