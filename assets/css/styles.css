@@ -18,6 +18,10 @@
   --indent: 11.7rem;
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   font: 15px/1.75 var(--sans-serif);
   font-weight: 300;
@@ -707,6 +711,63 @@ footer > div > div { flex: 1; }
   padding: 0.2em 0;
 }
 
+.about-contact {
+  background-color: var(--coffee);
+  display: flex;
+  color: var(--dark-blue);
+}
+
+.about-contact div {
+  flex: 1;
+}
+
+.about-contact div:first-child {
+  flex: none;
+  padding-right: 10em;
+}
+
+.about-contact {
+  font-size: var(--h5);
+  align-items: baseline;
+}
+
+.about-contact form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-contact label {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 30%;
+  padding-right: 5%;
+  margin-bottom: 3em;
+}
+
+.about-contact input,
+.about-contact textarea {
+  border: 0px;
+  border-bottom: 1px solid var(--dark-blue);
+  background: none;
+  width: 70%;
+  margin-bottom: 3em;
+  font-size: 1.25em;
+  font-family: var(--sans-serif);
+}
+
+#contact-submit {
+  background: var(--purple);
+  color: var(--coffee);
+  text-transform: uppercase;
+  border: none;
+  padding: 0.75em 1.25em;
+  float: right;
+  cursor: pointer;
+}
+
+#contact-submit:hover {
+  background: var(--dark-blue);
+}
 
 /* END OF ABOUT */
 
@@ -1211,4 +1272,26 @@ h5.caption {
   text-transform: uppercase;
   color: var(--purple);
   padding: 0.5em;
+}
+
+.tippy-tooltip {
+  background-color: var(--teal);
+  color: var(--coffee);
+}
+
+.tippy-tooltip[data-animatefill] {
+  background-color: transparent;
+}
+
+
+.tippy-tooltip .tippy-backdrop {
+  background-color: var(--teal);
+}
+
+.tippy-tooltip .tippy-roundarrow {
+  fill: var(--teal);
+}
+
+.tippy-tooltip[x-placement^='top'] .tippy-arrow {
+  border-top-color: var(--teal);
 }
