@@ -410,7 +410,7 @@ footer > div > div { flex: 1; }
   padding-right: calc(100% * 0.5 / 14);
 }
 
-.home-stories > .featured-image {
+.home .featured-image {
   width: calc(100% * 5 / 14);
   object-fit: contain;
 }
