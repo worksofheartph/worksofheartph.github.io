@@ -1092,12 +1092,10 @@ h5.caption {
 }
 
 #project-content .img-slider > .dots {
-  position: absolute;
-  left: 50%;
-  bottom: 1em;
-  display: flex;
-  width: auto;
-  transform: translateX(-50%);
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 }
 
 #project-content .img-slider > .dots > .dot {
