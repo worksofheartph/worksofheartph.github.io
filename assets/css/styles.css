@@ -283,6 +283,16 @@ footer > div > div { flex: 1; }
   width: 100%;
 }
 
+.woh-menu.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--coffee);
+  display: none;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .woh-menu > a > img {
   width: 2.5rem;
   height: 1.5rem;

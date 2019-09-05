@@ -23,6 +23,26 @@
   </div>
 </footer>
 
-<script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/transition.js"></script>
 <script src="/assets/js/zoom.js"></script>
+
+<script>
+(function () {
+  var menu = document.querySelector('.woh-menu')
+  var stickyMenu = document.querySelector('.woh-menu.sticky')
+  var menuY = menu.offsetTop
+  var prevStick
+  function onScroll () {
+    var y = window.scrollY || window.pageYOffset
+    var stick = y > menuY
+    if (prevStick !== stick) {
+      stickyMenu.style.display = stick ? 'flex' : 'none'
+      menu.style.opacity = stick ? 0 : 1
+      prevStick = stick
+    }
+  }
+  window.addEventListener('scroll', function () {
+    window.requestAnimationFrame(onScroll)
+  })
+}())
+</script>
