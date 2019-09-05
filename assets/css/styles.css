@@ -791,6 +791,11 @@ footer > div > div { flex: 1; }
   background: var(--dark-blue);
 }
 
+#contact-success {
+  margin: 2em 0;
+  display: none;
+}
+
 /* END OF ABOUT */
 
 /* START OF PROJECT */
