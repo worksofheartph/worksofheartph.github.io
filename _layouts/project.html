@@ -39,14 +39,32 @@ layout: default
   </section>
   {{ page.content }}
   <div class="related-projects">
+    <h5>More projects in {{ page.sector.first }}</h5>
+    <div class="related-cards">
     {%
       assign related_projects = site.projects |
-        where_exp:"project","project.sector contains page.sector[0]" |
+        where_exp:"project","project.sector contains page.sector.first" |
         where_exp:"project","project.id != page.id"
     %}
     {% for project in related_projects %}
-      <a href="{{ project.url }}">{{ project.title }}</a>
+      <a
+        href="{{ project.url }}"
+        class="
+          work-card
+          {% for sector in project.sector %}{{ sector | slugify }}
+          {% endfor %}
+          {{ project.location_tag | join: ' ' }}
+        "
+        style="--project-color: {{ project.color_b }}"
+      >
+        <div class="work-image" style="background-image: url({{ project.hero_image }})"></div>
+        <div class="work-text">
+          <h4>{{ project.title }}</h4>
+          <div class="project">With {{ project.name }}</div>
+        </div>
+      </a>
     {% endfor %}
+    </div>
   </div>
   <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
   <script>
