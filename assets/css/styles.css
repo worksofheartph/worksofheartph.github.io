@@ -1477,6 +1477,15 @@ h5.caption {
     padding: 3rem;
   }
 
+  .stories .post-featured {
+    flex-direction: column-reverse;
+  }
+
+  .more-stories > div {
+    width: 100%;
+  }
+
+
 }
 
 @media screen and (max-width: 700px) {
@@ -1540,6 +1549,11 @@ h5.caption {
 
   .story-list > .story {
     width: 100%;
+  }
+
+  .home-headline {
+    background: var(--coffee) url(../images/woh-logo.svg) no-repeat calc(100% * 0.85 / 14 - 2rem / 2) 2rem;
+    background-size: 1.5rem;
   }
 
 }

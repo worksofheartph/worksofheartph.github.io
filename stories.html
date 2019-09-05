@@ -9,8 +9,8 @@ permalink: /stories
         <a href="/" class="woh-heart"><img src="/assets/images/woh-logo-coffee.svg"></a>
         <div class="heart"><a href="/heart">Heart</a></div>
     </section>
-    <div class="post-featured">
-    <div class="post-featured-content">
+    <div class="post-featured mobile-flex-none">
+    <div class="post-featured-content mobile-full">
         <h5>STORIES</h5>
          {% for post in site.posts %}
       {% if forloop.first %}
@@ -27,7 +27,7 @@ permalink: /stories
         <p>{{ post.excerpt }}</p>
       </div>
     </div>
-    <img src="{{ post.thumb }}">
+    <img src="{{ post.thumb }}" class="mobile-full">
        {% endif %}
 
       {% endfor %}
