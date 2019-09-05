@@ -16,12 +16,12 @@ permalink: /
         <p class="tag-filters button-group" data-filter-group="sector">
           <span>Design for</span>
           <button data-filter="*" class="active">all,</button>
+          <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>,
           <button class="disabled" disabled="disabled">culture and identity,</button>
           <button data-filter=".education">education,</button>
           <button data-filter=".environment">environment,</button>
           <button data-filter=".health">health,</button>
-          <button data-filter=".human-civil-rights">human and civil rights,</button>
-          <button data-filter=".creative-entrepreneurship">creative entrepreneurship</button>,
+          <button data-filter=".human-and-civil-rights">human and civil rights,</button>
           <button class="disabled" disabled="disabled">innovation and technology</button>
         </p>
         <p class="location-filters button-group" data-filter-group="location">
@@ -45,7 +45,13 @@ permalink: /
     {% for project in ordered_projects %}
     <a
       href="{{ project.url }}"
-      class="work-card {% if project.type %}work-passion{% endif %} {{ project.sector_tag | join: ' ' }} {{ project.location_tag | join: ' ' }}"
+      class="
+        work-card
+        {% if project.type %}work-passion{% endif %}
+        {% for sector in project.sector %}{{ sector | slugify }}
+        {% endfor %}
+        {{ project.location_tag | join: ' ' }}
+      "
       style="--project-color: {{ project.color_b }}"
     >
       <div class="work-image" style="background-image: url({{ project.hero_image }})"></div>
