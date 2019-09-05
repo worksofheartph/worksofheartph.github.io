@@ -1359,7 +1359,7 @@ h5.caption {
   }
 
   .mobile-full,
-  #project-content > section > div:not(.captions),
+  #project-content > section > div:not(.captions):not(.dots),
   #project-content .img-70, #post-content .img-70 {
     width: 100% !important;
   }
@@ -1557,6 +1557,10 @@ h5.caption {
   .home-headline {
     background: var(--coffee) url(../images/woh-logo.svg) no-repeat calc(100% * 0.85 / 14 - 2rem / 2) 2rem;
     background-size: 1.5rem;
+  }
+
+  #project-content .img-slider > .captions {
+    width: 50% !important;
   }
 
 }
