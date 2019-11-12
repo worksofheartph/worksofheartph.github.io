@@ -38,7 +38,7 @@ meta_img: /assets/images/woh-about-share.jpg
    </header>
 
    <div class="more-stories">
-     {% for post in site.posts %}
+     {% for post in site.posts offset:1 %}
       <div class="story">
           <a href="{{ post.url }}"><img src="{{ post.thumb }}"></a><br/><br/>
         <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>

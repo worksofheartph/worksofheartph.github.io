@@ -551,8 +551,10 @@ footer > div > div { flex: 1; }
 .process-step img {
   width: 60%;
   margin-right: 5%;
-  object-fit: contain;
+/*  object-fit: contain;
   object-position: top center;
+*/  max-height: 300px;
+height: 100% !important;
 }
 
 .process-step h4 {
@@ -1565,10 +1567,10 @@ h5.caption {
 
 }
 
-@media screen and (max-height: 1000px) {
+@media screen and (max-height: 500px) {
   .project-hero,
   .project-hero-text {
-    height: auto !important;
+    height: 600px !important;
   }
 
   .project-hero > img, .project-hero-text {
