@@ -1,9 +1,11 @@
+permalink: "pretty"
+
 collections:
   posts:
-    permalink: "/stories/:slug"
+    permalink: "/stories/:slug/"
   projects:
     output: true
-    permalink: "/:name"
+    permalink: "/:name/"
 
 defaults:
   - scope:
