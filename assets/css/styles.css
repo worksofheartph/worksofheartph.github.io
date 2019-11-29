@@ -1020,6 +1020,16 @@ h5.caption {
   margin-bottom: 1em;
 }
 
+.img-gallery.row-3 div {
+  width: 32%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.img-gallery.row-3 div img {
+  margin-bottom: 0px !important;
+}
+
 .img-gallery > img {
   width: 32.5% !important;
 }
@@ -1301,6 +1311,11 @@ h5.caption {
   padding: 3em calc(100% * 3 / 14);
 }
 
+.post #post-content a {
+  color: var(--light-purple);
+  text-decoration: underline;
+}
+
 #post-content img {
   width: 100%;
   margin-bottom: 1em;
@@ -1316,15 +1331,17 @@ h5.caption {
   margin-bottom: 1.5em;
 }
 
-#post-content img + h5 {
-  margin-top: -1em;
-  margin-bottom: 1.5em;
+#post-content img + h5,
+#post-content div.with-caption + h5 {
+  margin-top: -1em !important;
+  margin-bottom: 1.5em !important;
 }
 
 .back-stories {
   text-transform: uppercase;
-  color: var(--purple);
+  color: var(--purple) !important;
   padding: 0.5em;
+  text-decoration: none !important;
 }
 
 .tippy-tooltip {
