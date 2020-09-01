@@ -368,9 +368,17 @@ published: true
 
     var success = document.querySelector('#contact-success')
     success.style.display = 'none'
-
+    
+    var formData = {}
+    for (entry of (new FormData(form)).entries()) {
+      formData[entry[0]] = entry[1]
+    }
+    
     fetch(form.action, {
-      method: 'post', body: new FormData(form)
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
     })
       .then(function(resp) { return resp.json() })
       .then(function(data) {
