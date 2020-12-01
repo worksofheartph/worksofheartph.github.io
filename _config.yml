@@ -1,15 +1,21 @@
-permalink: "pretty"
-
+---
+title: Worksofheartph.Github.Io
+timezone: UTC
 collections:
   posts:
-    permalink: "/stories/:slug/"
+    title: Posts
+    output: true
   projects:
+    title: Projects
     output: true
     permalink: "/:name/"
-
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+permalink: pretty
